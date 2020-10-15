@@ -38,3 +38,8 @@ linked_lists/out
 linked_lists/CMakeCache.txt
 linked_lists/CMakeFiles/
 linked_lists/CMakeSettings.json
+linked_lists/build.ninja
+linked_lists/cmake_install.cmake
+linked_lists/linked_lists/cmake_install.cmake
+linked_lists/rules.ninja
+linked_lists/tests/cmake_install.cmake
