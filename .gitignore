@@ -44,3 +44,5 @@ linked_lists/cpp/linked_lists/cmake_install.cmake
 linked_lists/cpp/rules.ninja
 linked_lists/cpp/tests/cmake_install.cmake
 linked_lists/cSharp/cSharp/obj/
+linked_lists/cSharp/.vs/
+linked_lists/cSharp/cSharp/bin/
