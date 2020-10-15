@@ -1,8 +1,25 @@
-﻿// linked_lists.h : Include file for standard system include files,
-// or project specific include files.
+﻿#pragma once
 
-#pragma once
+struct Node
+{
+    Node(int data) : data(data), next(nullptr)
+    {}
 
-#include <iostream>
+    int data;
+    Node* next;
+};
 
-// TODO: Reference additional headers your program requires here.
+class LinkedList
+{
+public:
+    LinkedList() = default;
+    ~LinkedList();
+
+    void add(int data);
+    void remove(int data);
+    void print();
+    int size();
+
+private:
+    Node* head = nullptr;
+};
