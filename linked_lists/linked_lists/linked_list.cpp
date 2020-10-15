@@ -94,3 +94,8 @@ int LinkedList::size()
     }
     return size;
 }
+
+Node* LinkedList::getHead()
+{
+    return head;
+}

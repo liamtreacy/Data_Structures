@@ -19,6 +19,7 @@ public:
     void remove(int data);
     void print();
     int size();
+    Node* getHead();
 
 private:
     Node* head = nullptr;

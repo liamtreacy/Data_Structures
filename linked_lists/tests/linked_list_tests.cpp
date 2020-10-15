@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN
 #include "../externals/catch.hpp"
 #include "../linked_lists/linked_list.h"
+#include "../utils/ll_utils.h"
 
 TEST_CASE("Default LL is empty", "Linked List Test")
 {
@@ -41,4 +42,23 @@ TEST_CASE("A few adds and removes from LL", "Linked List Test")
     ll.add(9);
     ll.remove(23);
     REQUIRE(ll.size() == 2);
+}
+
+TEST_CASE("LL has unique elements", "Linked List Utils Test")
+{
+    LinkedList ll;
+    ll.add(1);
+    ll.add(2);
+    ll.add(3);
+    REQUIRE(LinkedListUtils::hasUniqueElements(ll) == true);
+}
+
+TEST_CASE("LL does not have unique elements", "Linked List Utils Test")
+{
+    LinkedList ll;
+    ll.add(1);
+    ll.add(2);
+    ll.add(3);
+    ll.add(2);
+    REQUIRE(LinkedListUtils::hasUniqueElements(ll) == false);
 }
