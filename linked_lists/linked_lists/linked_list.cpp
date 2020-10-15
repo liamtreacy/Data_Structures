@@ -82,7 +82,7 @@ void LinkedList::print()
     }
 }
 
-int LinkedList::size()
+int LinkedList::size() const
 {
     Node* r = head;
     int size = 0;
@@ -98,4 +98,32 @@ int LinkedList::size()
 Node* LinkedList::getHead()
 {
     return head;
+}
+
+bool LinkedList::operator==(const LinkedList& rhs) const
+{
+    Node* lhs_r = this->head;
+    Node* rhs_r = rhs.head;
+
+    if (lhs_r && rhs_r == nullptr)
+        return true;
+
+    if (this->size() != rhs.size())
+        return false;
+
+    while (lhs_r != nullptr && rhs_r != nullptr)
+    {
+        if (lhs_r->data != rhs_r->data)
+            return false;
+
+        lhs_r = lhs_r->next;
+        rhs_r = rhs_r->next;
+    }
+
+    return true;
+}
+
+bool LinkedList::operator!=(const LinkedList& rhs) const
+{
+    return !operator==(rhs);
 }

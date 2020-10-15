@@ -18,8 +18,10 @@ public:
     void add(int data);
     void remove(int data);
     void print();
-    int size();
+    int size() const;
     Node* getHead();
+    bool operator==(const LinkedList& rhs) const;
+    bool operator!=(const LinkedList& rhs) const;
 
 private:
     Node* head = nullptr;

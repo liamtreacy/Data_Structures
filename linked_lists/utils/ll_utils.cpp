@@ -17,3 +17,8 @@ bool LinkedListUtils::hasUniqueElements(LinkedList& ll)
 
     return true;
 }
+
+void LinkedListUtils::removeDuplicates(LinkedList& ll)
+{
+
+}

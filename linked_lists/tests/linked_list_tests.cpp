@@ -53,6 +53,52 @@ TEST_CASE("LL has unique elements", "Linked List Utils Test")
     REQUIRE(LinkedListUtils::hasUniqueElements(ll) == true);
 }
 
+TEST_CASE("LLs are equal", "Linked List Utils Test")
+{
+    LinkedList ll;
+    ll.add(1);
+    ll.add(2);
+    ll.add(3);
+
+    LinkedList oll;
+    oll.add(1);
+    oll.add(2);
+    oll.add(3);
+
+    REQUIRE(ll == oll);
+}
+
+TEST_CASE("LLs are not equal", "Linked List Utils Test")
+{
+    LinkedList ll;
+    ll.add(1);
+    ll.add(2);
+    ll.add(3);
+
+    LinkedList oll;
+    oll.add(1);
+    oll.add(4);
+    oll.add(3);
+
+    REQUIRE_FALSE(ll == oll);
+}
+
+TEST_CASE("LLs are not equal because not same size", "Linked List Utils Test")
+{
+    LinkedList ll;
+    ll.add(1);
+    ll.add(2);
+    ll.add(3);
+
+    LinkedList oll;
+    oll.add(1);
+    oll.add(2);
+    oll.add(3);
+    oll.add(5);
+
+    REQUIRE_FALSE(ll == oll);
+}
+
 TEST_CASE("LL does not have unique elements", "Linked List Utils Test")
 {
     LinkedList ll;
@@ -60,5 +106,6 @@ TEST_CASE("LL does not have unique elements", "Linked List Utils Test")
     ll.add(2);
     ll.add(3);
     ll.add(2);
-    REQUIRE(LinkedListUtils::hasUniqueElements(ll) == false);
+    REQUIRE_FALSE(LinkedListUtils::hasUniqueElements(ll));
 }
+
