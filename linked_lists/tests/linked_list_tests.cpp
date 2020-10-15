@@ -109,3 +109,23 @@ TEST_CASE("LL does not have unique elements", "Linked List Utils Test")
     REQUIRE_FALSE(LinkedListUtils::hasUniqueElements(ll));
 }
 
+TEST_CASE("Remove duplicates", "Linked List Utils Test")
+{
+    LinkedList ll;
+    ll.add(1);
+    ll.add(2);
+    ll.add(3);
+    ll.add(5);
+    ll.add(3);
+    ll.add(1);
+
+    LinkedList expected;
+    expected.add(1);
+    expected.add(2);
+    expected.add(3);
+    expected.add(5);
+
+    LinkedListUtils::removeDuplicates(ll);
+
+    REQUIRE(ll == expected);
+}

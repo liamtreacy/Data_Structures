@@ -71,15 +71,49 @@ void LinkedList::remove(int data)
     }
 }
 
+void LinkedList::removePosition(int pos)
+{
+    int p = 0;
+
+    Node* r = head;
+    Node* prev = nullptr;
+
+    while (r != nullptr)
+    {
+        if (p == pos)
+        {
+            if (prev == nullptr)
+            {
+                Node* tmp = head;
+                head = head->next;
+                deletep(tmp);
+                return;
+            }
+            else
+            {
+                prev->next = r->next;
+                deletep(r);
+                return;
+            }
+            return;
+        }
+
+        p++;
+        prev = r;
+        r = r->next;
+    }
+}
+
 void LinkedList::print()
 {
     Node* r = head;
-
+    std::cout << "\n====\n";
     while (r != nullptr)
     {
         std::cout << r->data << " , ";
         r = r->next;
     }
+    std::cout << "\n====\n";
 }
 
 int LinkedList::size() const

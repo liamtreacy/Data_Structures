@@ -17,6 +17,7 @@ public:
 
     void add(int data);
     void remove(int data);
+    void removePosition(int pos);
     void print();
     int size() const;
     Node* getHead();
