@@ -35,3 +35,6 @@ linked_lists/externals/
 linked_lists/.vs/
 linked_lists/.vs/CMake Overview
 linked_lists/out
+linked_lists/CMakeCache.txt
+linked_lists/CMakeFiles/
+linked_lists/CMakeSettings.json

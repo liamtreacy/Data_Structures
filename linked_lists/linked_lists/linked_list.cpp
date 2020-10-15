@@ -1,6 +1,15 @@
 ﻿#include "linked_list.h"
 #include <iostream>
 
+namespace
+{
+    void deletep(Node* p)
+    {
+        delete p;
+        p = nullptr;
+    }
+}
+
 LinkedList::~LinkedList()
 {
     Node* r = head;
@@ -10,8 +19,7 @@ LinkedList::~LinkedList()
     {
         tmp = r;
         r = r->next;
-        delete tmp;
-        tmp = nullptr;
+        deletep(tmp);
     }
 }
 
@@ -36,7 +44,31 @@ void LinkedList::add(int data)
 
 void LinkedList::remove(int data)
 {
+    // This will only find and remove the first element to match the data
+    Node* r = head;
+    Node* prev = nullptr;
 
+    while (r != nullptr)
+    {
+        if (r->data == data)
+        {
+            if (prev == nullptr)
+            {
+                Node* tmp = head;
+                head = head->next;
+                deletep(tmp);
+                return;
+            }
+            else
+            {
+                prev->next = r->next;
+                deletep(r);
+                return;
+            }
+        }
+        prev = r;
+        r = r->next;
+    }
 }
 
 void LinkedList::print()
