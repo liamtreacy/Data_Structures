@@ -31,15 +31,15 @@
 *.out
 *.app
 
-linked_lists/externals/
-linked_lists/.vs/
-linked_lists/.vs/CMake Overview
-linked_lists/out
-linked_lists/CMakeCache.txt
-linked_lists/CMakeFiles/
-linked_lists/CMakeSettings.json
-linked_lists/build.ninja
-linked_lists/cmake_install.cmake
-linked_lists/linked_lists/cmake_install.cmake
-linked_lists/rules.ninja
-linked_lists/tests/cmake_install.cmake
+linked_lists/cpp/externals/
+linked_lists/cpp/.vs/
+linked_lists/cpp/.vs/CMake Overview
+linked_lists/cpp/out
+linked_lists/cpp/CMakeCache.txt
+linked_lists/cpp/CMakeFiles/
+linked_lists/cpp/CMakeSettings.json
+linked_lists/cpp/build.ninja
+linked_lists/cpp/cmake_install.cmake
+linked_lists/cpp/linked_lists/cmake_install.cmake
+linked_lists/cpp/rules.ninja
+linked_lists/cpp/tests/cmake_install.cmake
